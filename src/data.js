@@ -1,3 +1,7 @@
+import elasticLogo from './assets/logos/elastic.png'
+import netcompanyLogo from './assets/logos/netcompany.png'
+import linqLogo from './assets/logos/linq.png'
+
 export const personal = {
   name: 'Yiannis Nikolopoulos',
   title: 'Software Engineer',
@@ -7,6 +11,8 @@ export const personal = {
   email: 'ioannis.nikolopoulos@yahoo.com',
   phone: '+30 694 482 7369',
   linkedin: 'https://www.linkedin.com/in/ioannis-nikolopoulos/',
+  github: 'https://github.com/yiannisnikolopoulos',
+  resume: 'https://drive.google.com/file/d/1_tjlBQ-GaoIYsZA7O9YIo26tQEhQm-Eo/view?usp=sharing',
   portfolio: 'https://johnnikolo.github.io/portfolio/',
 }
 
@@ -19,6 +25,8 @@ export const experience = [
     location: 'Athens, Greece',
     type: 'Full-stack',
     color: '#00bfb3',
+    logo: elasticLogo,
+    logo: new URL('./assets/logos/elastic.png', import.meta.url).href,
     bullets: [
       'Shipped embeddable schema registration for Synthetics and implemented global ingest pipelines for SLOs, leading cross-team collaboration for the majority of these initiatives.',
       'Served as a go-to support point across Synthetics, SLOs, and Rules & Alerts, triaging and resolving customer-reported issues and bugs.',
@@ -35,6 +43,7 @@ export const experience = [
     location: 'Athens, Greece',
     type: 'Frontend',
     color: '#3b82f6',
+    logo: netcompanyLogo,
     bullets: [
       "Led design and development of Vodafone's component library from scratch, translating Figma designs into a production React.js library.",
       "Replaced Vodafone's legacy CMS with Contentful, leveraging GraphQL to fetch dynamic content and enable non-technical content management.",
@@ -50,6 +59,7 @@ export const experience = [
     location: 'Athens, Greece',
     type: 'Full-stack',
     color: '#8b5cf6',
+    logo: linqLogo,
     bullets: [
       'Took full-stack ownership end-to-end within a 5-engineer team, including a full revamp of the recruiting platform and an internal ATS-style hiring tool built from scratch.',
       'Used React.js, Vanilla JS, jQuery, HTML5, CSS/SASS, PHP (5-8), and MySQL across projects including WordPress-based builds.',

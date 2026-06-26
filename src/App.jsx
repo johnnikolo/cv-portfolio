@@ -1,50 +1,44 @@
-import { useState, useEffect } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import { ThemeProvider, CssBaseline } from '@mui/material'
+import { buildTheme } from './theme'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
+import { WhatIDo } from './components/WhatIDo'
 import { Experience } from './components/Experience'
 import { Skills } from './components/Skills'
+import { OpenSource } from './components/OpenSource'
 import { Education } from './components/Education'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { ScrollToTop } from './components/ScrollToTop'
+import { Loader } from './components/Loader'
 
 export default function App() {
-  const [theme, setTheme] = useState('dark')
-
-  function toggleTheme() {
-    setTheme(t => (t === 'dark' ? 'light' : 'dark'))
-  }
+  const [mode, setMode] = useState('dark')
+  const theme = useMemo(() => buildTheme(mode), [mode])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-  }, [theme])
-
-  useEffect(() => {
-    const elements = document.querySelectorAll('.animate')
-    const observer = new IntersectionObserver(
-      entries =>
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-            observer.unobserve(entry.target)
-          }
-        }),
-      { threshold: 0.1, rootMargin: '0px 0px -48px 0px' }
-    )
-    elements.forEach(el => observer.observe(el))
-    return () => observer.disconnect()
+    const t = setTimeout(() => setLoading(false), 2400)
+    return () => clearTimeout(t)
   }, [])
 
   return (
-    <>
-      <Header theme={theme} toggleTheme={toggleTheme} />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Loader visible={loading} />
+      <Header mode={mode} onToggle={() => setMode(m => (m === 'dark' ? 'light' : 'dark'))} />
       <main>
         <Hero />
+        <WhatIDo />
         <Experience />
         <Skills />
+        <OpenSource />
         <Education />
         <Contact />
       </main>
       <Footer />
-    </>
+      <ScrollToTop />
+    </ThemeProvider>
   )
 }
