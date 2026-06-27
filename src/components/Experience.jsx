@@ -30,7 +30,12 @@ export function Experience() {
           <Typography variant="h2" sx={{ mb: 7 }}>Work Experience</Typography>
         </Animate>
 
-        <Timeline position="alternate" sx={{ p: 0, m: 0 }}>
+        <Timeline position="alternate" sx={{
+          p: 0, m: 0,
+          '& .MuiTimelineItem-root:nth-of-type(even)': {
+            flexDirection: { xs: 'row', md: 'row-reverse' },
+          },
+        }}>
           {experience.map((job, i) => {
             const isRight = i % 2 === 0
             return (
@@ -86,7 +91,7 @@ export function Experience() {
                 )}
               </TimelineSeparator>
 
-              <TimelineContent sx={{ pb: 5, pl: isRight ? 3 : 0, pr: isRight ? 0 : 3, textAlign: 'left' }}>
+              <TimelineContent sx={{ pb: 5, pl: { xs: 3, md: isRight ? 3 : 0 }, pr: { xs: 0, md: isRight ? 0 : 3 }, textAlign: 'left' }}>
                 <Animate delay={i * 0.1}>
                   <Paper
                     elevation={0}
@@ -94,9 +99,8 @@ export function Experience() {
                       p: { xs: 3, md: 4 },
                       textAlign: 'left',
                       border: `1px solid ${isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.07)'}`,
-                      ...(isRight
-                        ? { borderLeft: `3px solid ${job.color}` }
-                        : { borderRight: `3px solid ${job.color}` }),
+                      borderLeft: { xs: `3px solid ${job.color}`, md: isRight ? `3px solid ${job.color}` : 'none' },
+                      borderRight: { xs: 'none', md: !isRight ? `3px solid ${job.color}` : 'none' },
                       bgcolor: isDark ? 'rgba(255,255,255,0.03)' : '#fff',
                       transition: 'transform 0.25s, box-shadow 0.25s',
                       '&:hover': {
@@ -121,7 +125,7 @@ export function Experience() {
                           {job.role}
                         </Typography>
                       </Box>
-                      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 0.5 }}>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'flex-start', md: 'flex-end' }, gap: 0.5 }}>
                         <Chip
                           label={job.type}
                           size="small"

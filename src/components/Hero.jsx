@@ -115,25 +115,26 @@ export function Hero() {
                         display: "flex",
                         alignItems: "center",
                         gap: 4,
-                        flexDirection: { xs: "column-reverse", md: "row" },
+                        flexDirection: { xs: "column", md: "row" },
                     }}
                 >
                     {/* Left: text */}
-                    <Box sx={{ flex: "1 1 0", minWidth: 0 }}>
+                    <Box sx={{ flex: "1 1 0", minWidth: 0, textAlign: { xs: 'center', md: 'left' } }}>
                         <Animate>
                             <Box
                                 component="img"
                                 src={profilePic}
                                 alt="Yiannis Nikolopoulos"
                                 sx={{
-                                    width: 300,
-                                    height: 300,
+                                    width: { xs: 140, sm: 200, md: 300 },
+                                    height: { xs: 140, sm: 200, md: 300 },
                                     borderRadius: "50%",
                                     objectFit: "cover",
                                     border: `3px solid ${theme.palette.primary.main}`,
                                     boxShadow: `0 0 0 4px ${theme.palette.primary.main}25`,
                                     mb: 3,
                                     display: "block",
+                                    mx: { xs: 'auto', md: 0 },
                                 }}
                             />
                         </Animate>
@@ -204,7 +205,7 @@ export function Hero() {
                         </Animate>
 
                         <Animate delay={0.16}>
-                            <Stack direction="row" spacing={1} sx={{ mb: 4 }}>
+                            <Stack direction="row" spacing={1} sx={{ mb: 4, justifyContent: { xs: 'center', md: 'flex-start' } }}>
                                 {[
                                     personal.linkedin,
                                     personal.github,
@@ -257,10 +258,11 @@ export function Hero() {
 
                         <Animate delay={0.24}>
                             <Stack
-                                direction="row"
+                                direction={{ xs: 'column', sm: 'row' }}
                                 spacing={2}
                                 flexWrap="wrap"
                                 useFlexGap
+                                alignItems={{ xs: 'center', sm: 'flex-start' }}
                             >
                                 <Button
                                     variant="contained"
