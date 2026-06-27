@@ -19,7 +19,7 @@ import { personal } from "../data";
 import { Animate } from "./Animate";
 
 const PHRASES = [
-    "products users love",
+    "delightful user experiences",
     "AI-driven automation",
     "agentic workflows",
     "tools that make engineers faster",
@@ -122,7 +122,13 @@ export function Hero() {
                     }}
                 >
                     {/* Left: text */}
-                    <Box sx={{ flex: "1 1 0", minWidth: 0, textAlign: { xs: 'center', md: 'left' } }}>
+                    <Box
+                        sx={{
+                            flex: "1 1 0",
+                            minWidth: 0,
+                            textAlign: { xs: "center", md: "left" },
+                        }}
+                    >
                         <Animate>
                             <Box
                                 component="img"
@@ -137,7 +143,7 @@ export function Hero() {
                                     boxShadow: `0 0 0 4px ${theme.palette.primary.main}25`,
                                     mb: 3,
                                     display: "block",
-                                    mx: { xs: 'auto', md: 0 },
+                                    mx: { xs: "auto", md: 0 },
                                 }}
                             />
                         </Animate>
@@ -157,7 +163,10 @@ export function Hero() {
                                 }}
                             >
                                 {firstName}{" "}
-                                <Box component="span" sx={{ color: "primary.main" }}>
+                                <Box
+                                    component="span"
+                                    sx={{ color: "primary.main" }}
+                                >
                                     {lastName}
                                 </Box>
                             </Typography>
@@ -208,7 +217,17 @@ export function Hero() {
                         </Animate>
 
                         <Animate delay={0.16}>
-                            <Stack direction="row" spacing={1} sx={{ mb: 4, justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                            <Stack
+                                direction="row"
+                                spacing={1}
+                                sx={{
+                                    mb: 4,
+                                    justifyContent: {
+                                        xs: "center",
+                                        md: "flex-start",
+                                    },
+                                }}
+                            >
                                 {[
                                     personal.linkedin,
                                     personal.github,
@@ -261,11 +280,11 @@ export function Hero() {
 
                         <Animate delay={0.24}>
                             <Stack
-                                direction={{ xs: 'column', sm: 'row' }}
+                                direction={{ xs: "column", sm: "row" }}
                                 spacing={2}
                                 flexWrap="wrap"
                                 useFlexGap
-                                alignItems={{ xs: 'center', sm: 'flex-start' }}
+                                alignItems={{ xs: "center", sm: "flex-start" }}
                             >
                                 <Button
                                     variant="contained"
