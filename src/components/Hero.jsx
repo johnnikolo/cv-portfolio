@@ -335,12 +335,34 @@ export function Hero() {
                             flex: "0 0 auto",
                             width: { xs: "80%", sm: "60%", md: "45%" },
                             maxWidth: 460,
+                            position: "relative",
                         }}
                     >
+                        {isDark && (
+                            <Box
+                                aria-hidden
+                                sx={{
+                                    position: "absolute",
+                                    inset: "-10%",
+                                    borderRadius: "50%",
+                                    background:
+                                        "radial-gradient(circle, rgba(108,99,255,0.38) 0%, rgba(34,211,238,0.18) 50%, transparent 75%)",
+                                    filter: "blur(32px)",
+                                    zIndex: 0,
+                                    pointerEvents: "none",
+                                }}
+                            />
+                        )}
                         <Lottie
                             animationData={codingAnimation}
                             loop
-                            style={{ width: "100%", height: "auto" }}
+                            style={{
+                                width: "100%",
+                                height: "auto",
+                                position: "relative",
+                                zIndex: 1,
+                                filter: isDark ? "brightness(1.6) contrast(1.25)" : "none",
+                            }}
                         />
                     </Box>
                 </Box>

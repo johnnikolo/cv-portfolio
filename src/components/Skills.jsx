@@ -3,29 +3,46 @@ import {
   SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs,
   SiPhp, SiMysql, SiGraphql, SiCss, SiSass, SiHtml5,
   SiJest, SiCypress, SiGit, SiWordpress, SiElasticsearch,
-  SiContentful, SiJira,
+  SiContentful, SiJira, SiGithub, SiKibana, SiOpenai,
+  SiJquery, SiStyledcomponents, SiTestinglibrary, SiReacthookform,
 } from 'react-icons/si'
+import { FaMicrosoft } from 'react-icons/fa'
 import { Animate } from './Animate'
 
 const TECH_ICONS = [
-  { Icon: SiTypescript, label: 'TypeScript', color: '#3178c6' },
-  { Icon: SiJavascript, label: 'JavaScript', color: '#f1e05a' },
-  { Icon: SiReact, label: 'React', color: '#61dafb' },
-  { Icon: SiNextdotjs, label: 'Next.js', color: '#fff' },
-  { Icon: SiNodedotjs, label: 'Node.js', color: '#68a063' },
-  { Icon: SiGraphql, label: 'GraphQL', color: '#e10098' },
-  { Icon: SiPhp, label: 'PHP', color: '#777bb3' },
-  { Icon: SiMysql, label: 'MySQL', color: '#4479a1' },
+  // Core
   { Icon: SiHtml5, label: 'HTML5', color: '#e34c26' },
   { Icon: SiCss, label: 'CSS3', color: '#264de4' },
   { Icon: SiSass, label: 'Sass', color: '#cc6699' },
-  { Icon: SiElasticsearch, label: 'Elasticsearch', color: '#00bfb3' },
+  { Icon: SiJavascript, label: 'JavaScript', color: '#f1e05a' },
+  { Icon: SiTypescript, label: 'TypeScript', color: '#3178c6' },
+  // Frontend
+  { Icon: SiReact, label: 'React', color: '#61dafb' },
+  { Icon: SiReacthookform, label: 'React Hook Form', color: '#ec5990' },
+  { Icon: SiStyledcomponents, label: 'Styled Components', color: '#db7093' },
+  { Icon: SiNextdotjs, label: 'Next.js', color: '#fff' },
+  { Icon: SiJquery, label: 'jQuery', color: '#0769ad' },
+  // Backend
+  { Icon: SiNodedotjs, label: 'Node.js', color: '#68a063' },
+  { Icon: SiPhp, label: 'PHP', color: '#777bb3' },
+  { Icon: SiMysql, label: 'MySQL', color: '#4479a1' },
+  { Icon: SiGraphql, label: 'GraphQL', color: '#e10098' },
+  // Testing
   { Icon: SiJest, label: 'Jest', color: '#c21325' },
+  { Icon: SiTestinglibrary, label: 'Testing Library', color: '#e33332' },
   { Icon: SiCypress, label: 'Cypress', color: '#69d3a7' },
+  { Icon: FaMicrosoft, label: 'Playwright', color: '#2ead33' },
+  // Elastic Stack
+  { Icon: SiElasticsearch, label: 'Elasticsearch', color: '#00bfb3' },
+  { Icon: SiKibana, label: 'Kibana', color: '#f04e98' },
+  // Tools
   { Icon: SiGit, label: 'Git', color: '#f05032' },
-  { Icon: SiContentful, label: 'Contentful', color: '#2478cc' },
+  { Icon: SiGithub, label: 'GitHub', color: '#fff' },
   { Icon: SiJira, label: 'Jira', color: '#0052cc' },
+  { Icon: SiContentful, label: 'Contentful', color: '#2478cc' },
   { Icon: SiWordpress, label: 'WordPress', color: '#21759b' },
+  // AI
+  { Icon: SiOpenai, label: 'AI Workflows', color: '#74aa9c' },
 ]
 
 
