@@ -11,7 +11,7 @@ export const personal = {
   email: 'ioannis.nikolopoulos@yahoo.com',
   phone: '+30 694 482 7369',
   linkedin: 'https://www.linkedin.com/in/ioannis-nikolopoulos/',
-  github: 'https://github.com/yiannisnikolopoulos',
+  github: 'https://github.com/johnnikolo',
   resume: 'https://drive.google.com/file/d/1_tjlBQ-GaoIYsZA7O9YIo26tQEhQm-Eo/view?usp=sharing',
   portfolio: 'https://johnnikolo.github.io/portfolio/',
 }

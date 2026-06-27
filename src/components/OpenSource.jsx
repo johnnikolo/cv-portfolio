@@ -9,8 +9,7 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Animate } from "./Animate";
 
-const GITHUB_USER = "yiannisnikolopoulos";
-const KIBANA_COMMITS_URL = `https://github.com/elastic/kibana/commits?author=${GITHUB_USER}`;
+const ELASTIC_GITHUB_URL = "https://github.com/yiannisnikolopoulos";
 
 export function OpenSource() {
     const theme = useTheme();
@@ -86,7 +85,7 @@ export function OpenSource() {
                         variant="contained"
                         size="large"
                         startIcon={<GitHubIcon />}
-                        href={KIBANA_COMMITS_URL}
+                        href={ELASTIC_GITHUB_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         sx={{

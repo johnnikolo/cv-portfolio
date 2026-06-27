@@ -34,7 +34,7 @@ export function Experience() {
           {experience.map((job, i) => {
             const isRight = i % 2 === 0
             return (
-            <TimelineItem key={job.id}>
+            <TimelineItem key={job.id} sx={{ '& .MuiTimelineContent-root': { textAlign: 'left' } }}>
               <TimelineOppositeContent
                 sx={{
                   display: { xs: 'none', md: 'flex' },
@@ -86,12 +86,13 @@ export function Experience() {
                 )}
               </TimelineSeparator>
 
-              <TimelineContent sx={{ pb: 5, pl: isRight ? 3 : 0, pr: isRight ? 0 : 3 }}>
+              <TimelineContent sx={{ pb: 5, pl: isRight ? 3 : 0, pr: isRight ? 0 : 3, textAlign: 'left' }}>
                 <Animate delay={i * 0.1}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: { xs: 3, md: 4 },
+                      textAlign: 'left',
                       border: `1px solid ${isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.07)'}`,
                       ...(isRight
                         ? { borderLeft: `3px solid ${job.color}` }

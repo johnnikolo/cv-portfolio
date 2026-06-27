@@ -14,6 +14,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import DownloadIcon from "@mui/icons-material/Download";
 import Lottie from "lottie-react";
 import codingAnimation from "../assets/loaderCat.json";
+import profilePic from "../assets/thats_me.jpeg";
 import { personal } from "../data";
 import { Animate } from "./Animate";
 
@@ -120,6 +121,23 @@ export function Hero() {
                     {/* Left: text */}
                     <Box sx={{ flex: "1 1 0", minWidth: 0 }}>
                         <Animate>
+                            <Box
+                                component="img"
+                                src={profilePic}
+                                alt="Yiannis Nikolopoulos"
+                                sx={{
+                                    width: 300,
+                                    height: 300,
+                                    borderRadius: "50%",
+                                    objectFit: "cover",
+                                    border: `3px solid ${theme.palette.primary.main}`,
+                                    boxShadow: `0 0 0 4px ${theme.palette.primary.main}25`,
+                                    mb: 3,
+                                    display: "block",
+                                }}
+                            />
+                        </Animate>
+                        <Animate>
                             <Typography
                                 variant="h1"
                                 sx={{
@@ -134,36 +152,10 @@ export function Hero() {
                                     color: "text.primary",
                                 }}
                             >
-                                Hi all, I'm{" "}
-                                <Box
-                                    component="span"
-                                    sx={{ color: "primary.main" }}
-                                >
-                                    {firstName} 👋
-                                </Box>{" "}
-                                <Box
-                                    component="span"
-                                    sx={{
-                                        display: "inline-block",
-                                        animation:
-                                            "wave 1.8s ease-in-out infinite",
-                                        transformOrigin: "70% 70%",
-                                        "@keyframes wave": {
-                                            "0%,50%,100%": {
-                                                transform: "rotate(0deg)",
-                                            },
-                                            "10%,30%": {
-                                                transform: "rotate(-10deg)",
-                                            },
-                                            "20%": {
-                                                transform: "rotate(12deg)",
-                                            },
-                                            "40%": {
-                                                transform: "rotate(9deg)",
-                                            },
-                                        },
-                                    }}
-                                ></Box>
+                                {firstName}{" "}
+                                <Box component="span" sx={{ color: "primary.main" }}>
+                                    {lastName}
+                                </Box>
                             </Typography>
                         </Animate>
 
@@ -361,7 +353,9 @@ export function Hero() {
                                 height: "auto",
                                 position: "relative",
                                 zIndex: 1,
-                                filter: isDark ? "brightness(1.6) contrast(1.25)" : "none",
+                                filter: isDark
+                                    ? "brightness(1.6) contrast(1.25)"
+                                    : "none",
                             }}
                         />
                     </Box>
