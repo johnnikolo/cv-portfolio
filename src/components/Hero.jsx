@@ -19,7 +19,9 @@ import { personal } from "../data";
 import { Animate } from "./Animate";
 
 const PHRASES = [
+    "agentic workflows",
     "observability tools",
+    "AI-driven automation",
     "component libraries",
     "alerting systems",
     "full-stack products",

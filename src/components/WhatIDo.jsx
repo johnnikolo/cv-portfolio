@@ -4,9 +4,10 @@ import landingAnimation from '../assets/coding.json'
 import { Animate } from './Animate'
 
 const SKILLS_BULLETS = [
-  '⚡ Build highly interactive frontends and design systems used at scale',
-  '⚡ Ship full-stack features end-to-end — from API design to production deployment',
-  '⚡ Drive observability and alerting platform work across cross-functional teams',
+  '⚡ Embrace AI tools to accelerate delivery, while always owning the underlying concepts and trade-offs',
+  '⚡ Build full-stack features end-to-end across complex, large-scale codebases',
+  '⚡ Drive observability and alerting platform work, leading initiatives from design through cross-team delivery',
+  '⚡ Elevate teams through mentoring, clear communication, and a high standard of engineering quality',
 ]
 
 export function WhatIDo() {
@@ -47,9 +48,9 @@ export function WhatIDo() {
 
             <Animate delay={0.08}>
               <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.8 }}>
-                User-focused Software Engineer with a strong eye for design and a deep understanding
-                of frontend architecture, component systems, and observability platforms. I thrive
-                at the intersection of engineering craft and product impact.
+                I'm a detail-oriented, user-focused, and outcome-driven engineer.
+                I care about understanding problems deeply before solving them, and about the
+                real impact of what I build on users, teams, and systems.
               </Typography>
             </Animate>
 

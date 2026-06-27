@@ -152,10 +152,19 @@ export function Experience() {
 
                     <Typography
                       variant="caption"
-                      sx={{ color: 'text.secondary', display: 'block', mb: 2.5, opacity: 0.75 }}
+                      sx={{ color: 'text.secondary', display: 'block', mb: job.description ? 1 : 2.5, opacity: 0.75 }}
                     >
                       {job.location}
                     </Typography>
+
+                    {job.description && (
+                      <Typography
+                        variant="body2"
+                        sx={{ color: 'text.secondary', mb: 2.5, lineHeight: 1.7, fontStyle: 'italic', opacity: 0.85 }}
+                      >
+                        {job.description}
+                      </Typography>
+                    )}
 
                     <Box component="ul" sx={{ p: 0, m: 0, listStyle: 'none' }}>
                       {job.bullets.map((bullet, j) => (
