@@ -19,12 +19,13 @@ import { personal } from "../data";
 import { Animate } from "./Animate";
 
 const PHRASES = [
-    "agentic workflows",
-    "observability tools",
+    "products users love",
     "AI-driven automation",
-    "component libraries",
+    "agentic workflows",
+    "tools that make engineers faster",
+    "observability tools",
     "alerting systems",
-    "full-stack products",
+    "component libraries",
 ];
 
 function useTypingEffect(phrases) {
