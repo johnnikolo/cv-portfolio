@@ -62,10 +62,10 @@ const ICON_GROUPS = [
       { Icon: FaMicrosoft, label: 'Playwright', color: '#2ead33' },
       { Icon: SiGit, label: 'Git', color: '#f05032' },
       { Icon: SiGithub, label: 'GitHub', color: '#fff' },
+      { Icon: SiFigma, label: 'Figma', color: '#F24E1E' },
       { Icon: SiJira, label: 'Jira', color: '#0052cc' },
       { Icon: SiContentful, label: 'Contentful', color: '#2478cc' },
       { Icon: SiWordpress, label: 'WordPress', color: '#21759b' },
-      { Icon: SiFigma, label: 'Figma', color: '#F24E1E' },
     ],
   },
 ]
