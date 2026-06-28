@@ -22,7 +22,7 @@ const PHRASES = [
     "delightful user experiences",
     "AI-driven automation",
     "agentic workflows",
-    "tools that make engineers faster",
+    "developer productivity tooling",
     "observability tools",
     "alerting systems",
     "component libraries",

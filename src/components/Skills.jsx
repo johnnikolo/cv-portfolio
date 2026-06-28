@@ -5,7 +5,7 @@ import {
   SiJest, SiCypress, SiGit, SiWordpress, SiElasticsearch,
   SiContentful, SiJira, SiGithub, SiKibana, SiOpenai,
   SiJquery, SiStyledcomponents, SiTestinglibrary, SiReacthookform,
-  SiGooglegemini, SiElastic,
+  SiGooglegemini, SiElastic, SiFigma,
 } from 'react-icons/si'
 import { FaMicrosoft } from 'react-icons/fa'
 import claudeLogo from '../assets/logos/claude.svg'
@@ -65,6 +65,7 @@ const ICON_GROUPS = [
       { Icon: SiJira, label: 'Jira', color: '#0052cc' },
       { Icon: SiContentful, label: 'Contentful', color: '#2478cc' },
       { Icon: SiWordpress, label: 'WordPress', color: '#21759b' },
+      { Icon: SiFigma, label: 'Figma', color: '#F24E1E' },
     ],
   },
 ]
