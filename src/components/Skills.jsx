@@ -27,7 +27,7 @@ const ICON_GROUPS = [
       { Icon: SiJavascript, label: 'JavaScript', color: '#f1e05a' },
       { Icon: SiTypescript, label: 'TypeScript', color: '#3178c6' },
       { Icon: SiReact, label: 'React', color: '#61dafb' },
-      { Icon: SiNextdotjs, label: 'Next.js', color: '#fff' },
+      { Icon: SiNextdotjs, label: 'Next.js', color: '#fff', lightColor: '#000' },
       { Icon: SiReacthookform, label: 'React Hook Form', color: '#ec5990' },
       { Icon: SiJquery, label: 'jQuery', color: '#0769ad' },
       { Icon: SiStyledcomponents, label: 'Styled Components', color: '#db7093' },
@@ -61,7 +61,7 @@ const ICON_GROUPS = [
       { Icon: SiCypress, label: 'Cypress', color: '#69d3a7' },
       { Icon: FaMicrosoft, label: 'Playwright', color: '#2ead33' },
       { Icon: SiGit, label: 'Git', color: '#f05032' },
-      { Icon: SiGithub, label: 'GitHub', color: '#fff' },
+      { Icon: SiGithub, label: 'GitHub', color: '#fff', lightColor: '#1a1a2e' },
       { Icon: SiFigma, label: 'Figma', color: '#F24E1E' },
       { Icon: SiJira, label: 'Jira', color: '#0052cc' },
       { Icon: SiContentful, label: 'Contentful', color: '#2478cc' },
@@ -70,7 +70,8 @@ const ICON_GROUPS = [
   },
 ]
 
-function IconCard({ Icon, src, label, color, isDark }) {
+function IconCard({ Icon, src, label, color, lightColor, isDark }) {
+  const resolvedColor = !isDark && lightColor ? lightColor : color
   return (
     <Tooltip title={label} placement="top">
       <Paper
@@ -88,14 +89,14 @@ function IconCard({ Icon, src, label, color, isDark }) {
           transition: 'transform 0.2s, box-shadow 0.2s, border-color 0.2s',
           '&:hover': {
             transform: 'translateY(-4px)',
-            borderColor: color,
-            boxShadow: `0 6px 24px ${color}30`,
+            borderColor: resolvedColor,
+            boxShadow: `0 6px 24px ${resolvedColor}30`,
           },
         }}
       >
         {src
           ? <Box component="img" src={src} alt={label} sx={{ width: 32, height: 32, objectFit: 'contain' }} />
-          : <Icon size={32} color={color} />
+          : <Icon size={32} color={resolvedColor} />
         }
         <Typography
           variant="caption"
